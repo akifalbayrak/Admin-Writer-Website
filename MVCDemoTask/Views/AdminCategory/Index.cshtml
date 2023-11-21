@@ -1,0 +1,84 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="card w-75 mx-auto">
+    <div class="card-body">
+
+        <div class="my-3">
+
+            <h3>Aktif Kategoriler</h3>
+
+            <table class="table">
+                <tr>
+                    <th>#</th>
+                    <th>Kategori adı</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    if (item.CategoryStatus == true)
+                    {
+
+                        <tr>
+                            <th>@item.CategoryId</th>
+                            <td class="w-50">@item.CategoryName</td>
+                            <td class="w-25"><ion-icon name="checkmark-circle-outline"></ion-icon></td>
+                            <td class="w-25">
+                                <a href="/AdminCategory/DeleteCategory/@item.CategoryId" class="btn btn-danger mx-2">Sil</a>
+                                <a href="/AdminCategory/EditCategory/@item.CategoryId" class="btn btn-warning mx-2">Güncelle</a>
+                            </td>
+                        </tr>
+                    }
+
+                }
+
+
+            </table>
+        </div>
+
+        <hr />
+
+        <div class="my-4">
+
+
+            <h3>Aktif Olmayan Kategoriler</h3>
+
+            <table class="table">
+                <tr>
+                    <th>#</th>
+                    <th>Kategori adı</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    if (item.CategoryStatus == false)
+                    {
+
+                        <tr>
+                            <th>@item.CategoryId</th>
+                            <td class="w-50">@item.CategoryName</td>
+                            <td class="w-25"><ion-icon name="close-circle-outline"></ion-icon></td>
+                            <td class="w-25">
+                                <a href="/AdminCategory/ActiveCategory/@item.CategoryId" class="btn btn-danger mx-2">Aktive et</a>
+                                <a href="/AdminCategory/EditCategory/@item.CategoryId" class="btn btn-warning mx-2">Güncelle</a>
+                            </td>
+                        </tr>
+                    }
+
+                }
+
+
+            </table>
+        </div>
+
+
+        <a href="/AdminCategory/AddCategory" class="btn btn-info w-100 my-4">New Category</a>
+    </div>
+
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

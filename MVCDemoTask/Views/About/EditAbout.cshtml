@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.About
+
+@{
+    ViewBag.Title = "EditAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>EditAbout</h2>
+
+<br />
+<h2>Hakkında Güncelleme Sayfası</h2>
+@using (Html.BeginForm("EditAbout", "About", FormMethod.Post))
+{
+    <div class="form-group">
+        @*@Html.Label("Kategori Id")*@
+        @Html.HiddenFor(x => x.About, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori Description")
+        @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori Durumu")
+        @Html.DropDownListFor(x => x.CategoryStatus, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+
+        <br />
+        <button class="btn btn-success">Güncelle</button>
+    </div>
+}
+
