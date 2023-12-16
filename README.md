@@ -1,2 +1,2 @@
-## Admin Writer Panel with MVC
+## Admin Writer Panel with MVC, Sql Server
 
