@@ -13,6 +13,7 @@ namespace MVCDemoTask.Controllers
 {
     public class WriterController : Controller
     {
+        TitleManager tm = new TitleManager(new EfTitleDal());
         WriterManager wm = new WriterManager(new EfWriterDal());
         WriterValidator writerValidator = new WriterValidator();
 
@@ -68,6 +69,12 @@ namespace MVCDemoTask.Controllers
                 }
             }
             return View();
+        }
+
+        public ActionResult TitleByWriter(int id)
+        {
+            var contentValues = tm.GetListByWriter(id);
+            return View(contentValues);
         }
 
     }

@@ -120,7 +120,11 @@ namespace MVCDemoTask.Controllers
             var titles=tm.GetList().ToPagedList(page,4);
             return View(titles);
         }
-
+        public ActionResult ContentByTitle(int id)
+        {
+            var titles = tm.GetListByWriter(id);
+            return View(titles);
+        }
         public ActionResult toDoList() 
         {
             return View();

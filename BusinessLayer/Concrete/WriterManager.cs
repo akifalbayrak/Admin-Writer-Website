@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLayer.Abstract;
+using DataAccessLayer;
 using DataAccessLayer.Abstracs;
 using EntityLayer.Concrete;
 
@@ -42,5 +43,6 @@ namespace BusinessLayer.Concrete
         {
             _writerDal.Update(writer);
         }
+
     }
 }

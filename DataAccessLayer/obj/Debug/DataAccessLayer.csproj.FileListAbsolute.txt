@@ -25,3 +25,4 @@ C:\Users\akf\source\repos\MVCDemoTask\DataAccessLayer\obj\Debug\DataAccessLayer.
 C:\Users\akf\source\repos\MVCDemoTask\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_message_class.resources
 C:\Users\akf\source\repos\MVCDemoTask\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_imagefiles.resources
 C:\Users\akf\source\repos\MVCDemoTask\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_admin_table.resources
+C:\Users\akf\source\repos\MVCDemoTask\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.deletingabout.resources

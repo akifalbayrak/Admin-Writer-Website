@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstracs\IAboutDal.cs" />
     <Compile Include="Abstracs\IAdminDal.cs" />
     <Compile Include="Abstracs\ICategoryDal.cs" />
     <Compile Include="Abstracs\IContactDal.cs" />
@@ -67,7 +66,6 @@
     <Compile Include="Concrete\Repositories\WriterRepository.cs" />
     <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
-    <Compile Include="EntityFramework\EfAboutDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
@@ -118,6 +116,10 @@
     <Compile Include="Migrations\202310151238114_mig_admin_table.designer.cs">
       <DependentUpon>202310151238114_mig_admin_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202311212030559_deleting-about.cs" />
+    <Compile Include="Migrations\202311212030559_deleting-about.designer.cs">
+      <DependentUpon>202311212030559_deleting-about.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -164,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310151238114_mig_admin_table.resx">
       <DependentUpon>202310151238114_mig_admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311212030559_deleting-about.resx">
+      <DependentUpon>202311212030559_deleting-about.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

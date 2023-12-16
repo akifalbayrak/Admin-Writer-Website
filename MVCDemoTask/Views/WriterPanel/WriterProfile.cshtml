@@ -8,7 +8,7 @@
 <h2>Profiliniz Düzenleyin</h2>
 @using (Html.BeginForm("WriterProfile", "WriterPanel", FormMethod.Post))
 {
-    <div class="form-group">
+    <div class="form-group card card-body">
         @*@Html.Label("Yazar ID")*@
         @Html.HiddenFor(x => x.WriterId, new { @class = "form-control" })
 

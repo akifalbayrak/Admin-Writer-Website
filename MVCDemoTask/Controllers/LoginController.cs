@@ -68,7 +68,7 @@ namespace MVCDemoTask.Controllers
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
-            return RedirectToAction("Titles", "Default");
+            return RedirectToAction("HomePage", "Home");
         }
     }
 }

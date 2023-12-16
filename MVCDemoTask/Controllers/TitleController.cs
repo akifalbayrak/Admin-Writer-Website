@@ -63,7 +63,7 @@ namespace MVCDemoTask.Controllers
         [HttpGet]
         public ActionResult EditTitle(int id)
         {
-            List<SelectListItem> valueTitle = (from x in cm.GetList()
+            List<SelectListItem> valueCategory = (from x in cm.GetList()
                                                   select new SelectListItem
                                                   {
                                                       Text = x.CategoryName,
@@ -75,7 +75,8 @@ namespace MVCDemoTask.Controllers
                 new SelectListItem { Text = "False", Value = "false" }
             };
 
-            ViewBag.vlc = valueTitle;
+
+            ViewBag.vlc = valueCategory;
             ViewBag.vld = valueTitleStatus;
             var titleValue = tm.GetById(id);
             return View(titleValue);
@@ -83,6 +84,7 @@ namespace MVCDemoTask.Controllers
         [HttpPost]
         public ActionResult EditTitle(Title title)
         {
+            title.TitleDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             tm.TitleUpdate(title);
             return RedirectToAction("Index");
         }
@@ -101,6 +103,10 @@ namespace MVCDemoTask.Controllers
             tm.TitleDelete(titleValue);
             return RedirectToAction("Index");
         }
-
+        public ActionResult TitleByWriter(int id)
+        {
+            var contentValues = tm.GetListByWriter(id);
+            return View(contentValues);
+        }
     }
 }

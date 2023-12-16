@@ -17,34 +17,43 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
 </head>
 <body>
-    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
-        <thead>
-            <tr>
-                <th>Başlık Id</th>
-                <th>Başlık Adı</th>
-                <th>Tarih</th>
-                <th>Yazar</th>
-                <th>Kategori</th>
-                <th>Durum</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var x in Model)
-            {
-                <tr>
-                    <td>@x.TitleId</td>
-                    <td>@x.TitleName</td>
-                    <td>@x.TitleDate</td>
-                    <td>@x.Writer.WriterName @x.Writer.WriterSurname</td>
-                    <td>@x.Category.CategoryName</td>
-                    <td>@x.Category.CategoryStatus</td>
-                    
-                </tr>
-            }
+    <div class="card">
+        <p class="text-center h3 align-items-center mt-5">Başlık Raporları</p>
+        <div class="card-body">
 
-        </tbody>
-    </table>
+            <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+                
+                <thead>
+                    <tr>
+                        <th>Başlık Id</th>
+                        <th>Başlık Adı</th>
+                        <th>Tarih</th>
+                        <th>Yazar</th>
+                        <th>Kategori</th>
+                        <th>Durum</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.TitleId</td>
+                            <td>@x.TitleName</td>
+                            <td>@x.TitleDate</td>
+                            <td>@x.Writer.WriterName @x.Writer.WriterSurname</td>
+                            <td>@x.Category.CategoryName</td>
+                            <td>@x.Category.CategoryStatus</td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
@@ -59,15 +68,15 @@
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
     <script>
-	$(document).ready(function() {
-	    var table = $('#example').DataTable( {
-	        lengthChange: false,
-	        buttons: [ 'copy', 'excel', 'csv', 'pdf', 'colvis' ]
-	    } );
+        $(document).ready(function () {
+            var table = $('#example').DataTable({
+                lengthChange: false,
+                buttons: ['copy', 'excel', 'csv', 'pdf', 'colvis']
+            });
 
-	    table.buttons().container()
-	        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
-	} );
+            table.buttons().container()
+                .appendTo('#example_wrapper .col-md-6:eq(0)');
+        });
     </script>
 </body>
 </html>

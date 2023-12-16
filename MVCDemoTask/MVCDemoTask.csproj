@@ -142,7 +142,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\AuthorizationController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
@@ -2600,7 +2599,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
@@ -2621,8 +2619,6 @@
     <Content Include="Views\Title\AddTitle.cshtml" />
     <Content Include="Views\Content\ContentByTitle.cshtml" />
     <Content Include="Views\Title\EditTitle.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
-    <Content Include="Views\About\AboutPartial.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\GetContactDetails.cshtml" />
     <Content Include="Views\Contact\MessageListMenu.cshtml" />
@@ -2662,7 +2658,11 @@
     <Content Include="Views\Authorization\AddAdmin.cshtml" />
     <Content Include="Views\Authorization\EditAdmin.cshtml" />
     <Content Include="Views\Home\MainLoginPage.cshtml" />
-    <Content Include="Views\About\EditAbout.cshtml" />
+    <Content Include="Views\Title\TitleByWriter.cshtml" />
+    <Content Include="Views\Writer\TitleByWriter.cshtml" />
+    <Content Include="Views\WriterPanelContent\ContentByTitle.cshtml" />
+    <Content Include="Views\WriterPanel\ContentTitle.cshtml" />
+    <Content Include="Views\WriterPanel\ContentByTitle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
